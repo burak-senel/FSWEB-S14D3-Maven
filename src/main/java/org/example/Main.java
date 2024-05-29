@@ -12,9 +12,9 @@ import org.example.company.Mitsubishi;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        Car mitsubishi = new Mitsubishi("deneme1", 2);
-        Car holden = new Holden("deneme2", 3);
-        Car ford = new Ford("deneme3", 4);
+        Car mitsubishi = new Mitsubishi( 2,"deneme1");
+        Car holden = new Holden( 3,"deneme2");
+        Car ford = new Ford( 4,"deneme3");
 
         System.out.println(mitsubishi.startEngine());
         System.out.println(mitsubishi.accelerate());
@@ -28,9 +28,9 @@ public class Main {
         System.out.println(ford.accelerate());
         System.out.println(ford.brake());
 
-        CarSkeleton gasCar = new GasPoweredCar(15.0, 4);
-        CarSkeleton electricCar = new ElectricCar(200.0, 85);
-        CarSkeleton hybridCar = new HybridCar(20.0, 40, 4);
+        CarSkeleton gasCar = new GasPoweredCar("denemeler", "wfdsf",5,3);
+        CarSkeleton electricCar = new ElectricCar("denemelerce", "wsdgsdf",4,5);
+        CarSkeleton hybridCar = new HybridCar("denemelercee3", "dsfsdf",4,4,5);
 
         gasCar.startEngine();
         gasCar.drive();
@@ -47,6 +47,8 @@ public class Main {
         printCarType(gasCar);
         printCarType(electricCar);
         printCarType(hybridCar);
+        System.out.println(mitsubishi);
+        System.out.println(gasCar);
     }
     public static void printCarType(Object car) {
         System.out.println("Car type: " + car.getClass().getSimpleName());

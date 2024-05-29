@@ -1,22 +1,22 @@
 package org.example.company;
 
 public class Mitsubishi extends Car{
-    public Mitsubishi(String name, int cylinders) {
-        super(name, cylinders);
+    public Mitsubishi( int cylinders,String name) {
+        super(cylinders,name);
     }
 
     @Override
     public String startEngine() {
-        return getClass().getSimpleName() + " - Mitsubishi's engine is starting";
+        return getName() + " - Mitsubishi's engine is starting";
     }
 
     @Override
     public String accelerate() {
-        return getClass().getSimpleName() + " - Mitsubishi is accelerating";
+        return getName() + " - Mitsubishi is accelerating";
     }
 
     @Override
     public String brake() {
-        return getClass().getSimpleName() + " - Mitsubishi is braking";
+        return getName() + " - Mitsubishi is braking";
     }
 }

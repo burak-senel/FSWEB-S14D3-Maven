@@ -5,19 +5,22 @@ public class HybridCar  extends CarSkeleton{
     private int batterySize;
     private int cylinders;
 
-    public HybridCar(double avgKmPerLiter, int batterySize, int cylinders) {
+    public HybridCar(String name, String description, double avgKmPerLiter, int batterySize, int cylinders) {
+        super(name, description);
         this.avgKmPerLiter = avgKmPerLiter;
         this.batterySize = batterySize;
         this.cylinders = cylinders;
     }
+
     @Override
     public void startEngine() {
+        runEngine(this);
+
         System.out.println(getClass().getSimpleName() + " - The hybrid engine is starting");
     }
 
     @Override
     public void drive() {
-        runEngine();
         System.out.println(getClass().getSimpleName() + " - The hybrid car is driving");
     }
 
